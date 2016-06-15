@@ -1,0 +1,16 @@
+{application, mcache,
+ [{description, "An OTP application"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, { mcache_app, []}},
+  {applications,
+   [kernel,
+    stdlib
+   ]},
+  {env,[]},
+  {modules, [mcache_app, mcache_sup, mcache]},
+
+  {maintainers, []},
+  {licenses, []},
+  {links, []}
+ ]}.

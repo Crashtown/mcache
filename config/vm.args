@@ -1,0 +1,6 @@
+-sname mcache
+
+-setcookie mcache_cookie
+
++K true
++A30
