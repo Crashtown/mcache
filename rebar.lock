@@ -1,1 +1,4 @@
-[].
+[{<<"ct_resource_discovery">>,
+  {git,"git://github.com/crashtown/ct_resource_discovery.git",
+       {ref,"9de1df19dcb9cd5d6d72a505f7471bc7812f1140"}},
+  0}].

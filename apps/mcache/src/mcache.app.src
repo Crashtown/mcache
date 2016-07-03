@@ -5,7 +5,8 @@
   {mod, { mcache_app, []}},
   {applications,
    [kernel,
-    stdlib
+    stdlib,
+    ct_resource_discovery
    ]},
   {env,[]},
   {modules, [mcache_app, mcache_sup, mcache]},

@@ -78,9 +78,12 @@ handle_protocol(Message) ->
     handle_message(binary:split(Message, <<" ">>)).
 
 handle_message([<<"SET">>, Args]) ->
-    [Key, Value] = args(Args),
-    ok = mcache:set(Key, Value),
-    {ok, <<"STORED">>};
+    Response = case args(Args) of
+      [Key, Value] ->
+        ok = mcache:set(Key, Value), <<"STORED">>;
+      _ -> <<"BAD ARGS">>
+    end,
+    {ok, Response};
 handle_message([<<"GET">>, Key]) ->
     Response = case mcache:get(Key) of
         {Key, not_found} -> <<"NOT FOUND">>;
